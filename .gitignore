@@ -1,0 +1,9 @@
+*.log
+files_and_folders_creater.py
+*.txt
+*.zip
+*.venv
+.venv
+venv
+env
+unzip.py
