@@ -1,7 +1,7 @@
 *.log
 files_and_folders_creater.py
 *.txt
-*.zip
+#*.zip
 *.venv
 .venv
 venv
