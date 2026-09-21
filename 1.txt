@@ -1,0 +1,142 @@
+14) #todo: Дан массив размера N. Найти минимальное растояние между одинаковыми значениями в массиве и вывести их индексы.
+# Одинаковых значение может быть два и более !
+Пример:
+mass = [1,2,17,54,30,89,2,1,6,2]
+Для числа 1 минимальное растояние в массиве по индексам: 0 и 7
+Для числа 2 минимальное растояние в массиве по индексам: 6 и 9
+Для числа 17 нет минимального растояния т.к элемент в массиве один.
+
+15) #todo: Дан целочисленный массив размера N из 10 элементов.
+#Преобразовать массив, увеличить каждый его элемент на единицу.
+
+16)# todo: База данных пользователя.
+# Задан массив объектов пользователя
+
+users = [{'login': 'Piter', 'age': 23, 'group': "admin"},
+         {'login': 'Ivan',  'age': 10, 'group': "guest"},
+         {'login': 'Dasha', 'age': 30, 'group': "master"},
+         {'login': 'Fedor', 'age': 13, 'group': "guest"}]
+
+Написать фильтр который будет выводить отсортированные объекты по возрасту(больше введеного)
+,первой букве логина, и заданной группе.
+
+#Сперва вводится тип сортировки:
+1. По возрасту
+2. По первой букве
+3. По группе
+
+тип сортировки: 1
+
+#Затем сообщение для ввода
+Ввидите критерии поиска: 16
+
+Результат:
+#Пользователь: 'Piter' возраст 23 года , группа  "admin"
+#Пользователь: 'Dasha' возраст 30 лет , группа  "master"
+
+17)#todo: Заданы множества
+# все пользователи
+all_users = {'id3', 'id5', 'id9', 'id8', 'id2', 'id1', 'id4', 'id6', 'id7', 'id10'}
+
+# пользователи не в сети
+offline_users = {'id3', 'id9', 'id7', 'id2', 'id4', 'id6'}
+
+Вычислить пользователей online
+
+18) #todo: Заданы множества
+#Даны читатели книг
+readers_books = {'id3', 'id5', 'id9', 'id8', 'id2', 'id1' }
+
+#Даны читатели газет
+readers_magazines = { 'id8', 'id2', 'id1', 'id4', 'id6', 'id7', 'id10'}
+
+Найти пользователей кто читает и книги и газеты
+
+19)#todo: Требуется создать csv-файл «algoritm.csv» со следующими столбцами:
+# id) - номер по порядку (от 1 до 10);
+# значение из списка algoritm
+
+algoritm = [ "C4.5" , "k - means" , "Метод опорных векторов" ,
+             "Apriori", "EM", "PageRank" , "AdaBoost", "kNN" ,
+             "Наивный байесовский классификатор", "CART" ]
+
+# Каждое значение из списка должно находится на отдельной строке.
+# Пример файла algoritm.csv:
+1) "C4.5"
+2) "k - means"
+.....
+20)#todo: Выведите все строки данного файла в обратном порядке, допишите их в этот же файл.
+# Для этого считайте список всех строк при помощи метода readlines().
+
+#Содержимое файла inverted_sort.txt
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+
+# Результат
+Complex is better than complicated.
+Simple is better than complex.
+Explicit is better than implicit.
+Beautiful is better than ugly.
+
+21)#todo: Задан шаблон config_default.txt, где каждому в текстовом файле параметру
+# нужно сопоставить данные для подстановки.
+
+# Содержимое файла config_default.txt
+# Конфигурация приложения.
+app_name    = ?
+version     = ?
+debug       = ?
+
+# Настройки базы данных
+db_host     = ?
+db_port     = ?
+db_name     = ?
+db_user     = ?
+db_password = ?
+
+# Настройки API
+api_key     = ?
+api_secret  = ?
+base_url    = ?
+
+# Пути
+log_file    = ?
+data_dir    = ?
+temp_dir    = ?
+
+
+# Данные для подстановки
+config_values = {
+    'app_name': 'NextGen',
+    'version': '1.0.0',
+    'debug':  True,
+    'db_host': 'localhost',
+    'db_port': 5432,
+    'db_name': 'my_database',
+    'db_user': 'admin',
+    'db_password': 'secret123',
+    'api_key': 'ak_123456789',
+    'api_secret': 'sk_987654321',
+    'base_url': 'https://api.example.com',
+    'log_file': '/var/log/app.log',
+    'data_dir': '/opt/app/data',
+    'temp_dir': '/tmp/app',
+    'max_workers': 10,
+    'timeout': 30,
+    'retry_attempts': 3
+}
+
+# В итоге вместо "?" должны подставиться значения и получиться файл config.txt:
+
+# Конфигурация приложения
+app_name    =  "NextGen"
+version     =  '1.0.0'
+debug       =  True
+
+# Настройки базы данных
+db_host     =  5432
+.....
+
+22)
