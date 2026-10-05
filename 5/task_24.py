@@ -11,3 +11,39 @@
 # циклически сдвигаться влево на 1, второй строки — на 2, третьей строки — на три и т.д.
 # В этой задаче удобно считывать файл построчно, шифруя каждую строку в отдельности.
 # В каждой строчке содержатся различные символы. Шифровать нужно только буквы кириллицы.
+
+import os
+
+def caesar_cipher_left(text, shift):
+    ru_lower = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+    ru_upper = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+    ALPHABET_SIZE = 33
+    result = []
+    for char in text:
+        if char in ru_lower:
+            idx = ru_lower.index(char)
+            new_idx = (idx - shift) % ALPHABET_SIZE
+            result.append(ru_lower[new_idx])
+        elif char in ru_upper:
+            idx = ru_upper.index(char)
+            new_idx = (idx - shift) % ALPHABET_SIZE
+            result.append(ru_upper[new_idx])
+        else:
+            result.append(char)    
+    return "".join(result)
+
+
+def process_file():
+    with open("message.txt", "r", encoding="utf-8") as infile, \
+         open("encrypted.txt", "w", encoding="utf-8") as outfile:
+        
+        for line_num, line in enumerate(infile, start=1):
+            encrypted_line = caesar_cipher_left(line, line_num)
+            outfile.write(encrypted_line)
+            
+    print("Файл encrypted.txt успешно записан зашифрованными данными.")
+
+if __name__ == "__main__":
+    process_file()
+
+
