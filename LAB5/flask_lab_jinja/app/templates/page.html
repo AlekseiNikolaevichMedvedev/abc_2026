@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Экспериментальная страница{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #d9534f; font-weight: bold; }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1>Страница со специфичными стилями</h1>
+    <p class="important">
+        Этот текст покрашен с помощью дополнительного тега style, внедренного через super() в блок head.
+    </p>
+{% endblock %}

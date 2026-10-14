@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1>Hello, {{ user.nickname }}!</h1>
+    <p>Это главная страница. Данные подставлены через Jinja2.</p>
+
+    {% if user.nickname == 'Miguel' %}
+        <p>Вы вошли как: <strong>Администратор</strong>.</p>
+    {% else %}
+        <p>Вы вошли как: <strong>Обычный пользователь</strong>.</p>
+    {% endif %}
+
+    <h2>Демонстрация цикла Jinja2:</h2>
+    <ul>
+    {% for i in range(1, 4) %}
+        <li>Генерируемый пункт меню №{{ i }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
